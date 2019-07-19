@@ -12,11 +12,16 @@ code {
     monospace;
 }
 
-.App {
+.main {
   display: flex;
 }
 
 .pokemons-list,
 .pokedex {
   width: 50%;
+}
+
+.form-wrapper {
+  margin-top: 20px;
+  text-align: center;
 }
