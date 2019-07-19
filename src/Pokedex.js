@@ -9,7 +9,7 @@ const Pokedex = () => {
       <h2>Pokedex</h2>
 
       {state.capturedPokemons.map((pokemon) =>
-        <div key={`${pokemon.id}-${pokemon.name}`}>
+        <div key={pokemon.name}>
           <div>
             <span>{pokemon.name}</span>
             <button onClick={release(pokemon)}>-</button>

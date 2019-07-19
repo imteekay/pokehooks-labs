@@ -1,4 +1,4 @@
-import { CAPTURE, RELEASE, ADD_POKEMON } from './actions';
+import { CAPTURE, RELEASE, ADD_POKEMON, ADD_POKEMONS } from './actions';
 
 const getCapturedPokemons = (capturedPokemons, releasedPokemon) =>
   capturedPokemons.filter(pokemon => pokemon !== releasedPokemon)
@@ -21,6 +21,11 @@ const addPokemon = (pokemon, state) => ({
   capturedPokemons: state.capturedPokemons
 });
 
+const addPokemons = (pokemons, state) => ({
+  pokemons: pokemons,
+  capturedPokemons: state.capturedPokemons
+});
+
 const pokemonReducer = (state, action) => {
   switch (action.type) {
     case CAPTURE:
@@ -29,6 +34,8 @@ const pokemonReducer = (state, action) => {
       return releasePokemon(action.pokemon, state);
     case ADD_POKEMON:
       return addPokemon(action.pokemon, state);
+    case ADD_POKEMONS:
+      return addPokemons(action.pokemons, state);
     default:
       return state;
   }

@@ -1,16 +1,12 @@
 import React, { createContext, useReducer } from 'react';
 import { pokemonReducer } from './reducers';
-import { CAPTURE, RELEASE, ADD_POKEMON } from './actions';
+import { CAPTURE, RELEASE, ADD_POKEMON, ADD_POKEMONS } from './actions';
 
 const PokemonContext = createContext();
 
 const PokemonProvider = (props) => {
   const defaultState = {
-    pokemons: [
-      { id: 1, name: 'Bulbasaur' },
-      { id: 2, name: 'Charmander' },
-      { id: 3, name: 'Squirtle' }
-    ],
+    pokemons: [],
     capturedPokemons: []
   };
 
@@ -26,13 +22,18 @@ const PokemonProvider = (props) => {
 
   const addPokemon = (pokemon) => {
     dispatch({ type: ADD_POKEMON, pokemon });
-  }
+  };
+
+  const addPokemons = (pokemons) => {
+    dispatch({ type: ADD_POKEMONS, pokemons });
+  };
 
   const providerValue = {
     state,
     capture,
     release,
-    addPokemon
+    addPokemon,
+    addPokemons
   };
 
   return (
