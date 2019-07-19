@@ -12,5 +12,4 @@ const generateID = () => {
   return a + b;
 }
 
-
 export { generateID };
