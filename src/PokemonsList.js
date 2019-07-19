@@ -7,9 +7,9 @@ const PokemonsList = () => {
   return (
     <div className="pokemons-list">
       <h2>Pokemons List</h2>
+
       {state.pokemons.map((pokemon) =>
         <div key={`${pokemon.id}-${pokemon.name}`}>
-          <p>{pokemon.id}</p>
           <div>
             <span>{pokemon.name}</span>
             <button onClick={capture(pokemon)}>+</button>
