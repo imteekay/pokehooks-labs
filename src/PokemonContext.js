@@ -3,23 +3,17 @@ import React, { createContext, useState } from 'react';
 const PokemonContext = createContext();
 
 const PokemonProvider = (props) => {
-  const [pokemons, setPokemons] = useState([
-    { id: 1, name: 'Bulbasaur' },
-    { id: 2, name: 'Charmander' },
-    { id: 3, name: 'Squirtle' }
-  ]);
-
-  const [capturedPokemons, setCapturedPokemons] = useState([]);
-
-  const providerValue = {
-    pokemons,
-    setPokemons,
-    capturedPokemons,
-    setCapturedPokemons
-  };
+  const [state, setState] = useState({
+    pokemons: [
+      { id: 1, name: 'Bulbasaur' },
+      { id: 2, name: 'Charmander' },
+      { id: 3, name: 'Squirtle' }
+    ],
+    capturedPokemons: []
+  });
 
   return (
-    <PokemonContext.Provider value={providerValue}>
+    <PokemonContext.Provider value={[state, setState]}>
       {props.children}
     </PokemonContext.Provider>
   )
