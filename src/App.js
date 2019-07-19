@@ -3,13 +3,16 @@ import './App.css';
 
 import PokemonsList from './PokemonsList';
 import Pokedex from './Pokedex';
+import { PokemonProvider } from './PokemonContext';
 
 const App = () => {
   return (
-    <div className="App">
-      <PokemonsList />
-      <Pokedex />
-    </div>
+    <PokemonProvider>
+      <div className="App">
+        <PokemonsList />
+        <Pokedex />
+      </div>
+    </PokemonProvider>
   );
 }
 
