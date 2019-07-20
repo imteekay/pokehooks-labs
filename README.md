@@ -1,6 +1,6 @@
 # Pokehooks Labs
 
-Using pokemons to do some experiements on the React Hooks API
+A laboratory to use pokemons and do some experiments with React Hooks API
 
 - [Building two lists, pokemons and pokedex, with `useState`](https://github.com/leandrotk/pokehooks/pull/1/files)
 - [Sharing data with `Context API`](https://github.com/leandrotk/pokehooks/pull/2/files)
