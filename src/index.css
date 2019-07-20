@@ -19,6 +19,8 @@ code {
 .pokemons-list,
 .pokedex {
   width: 50%;
+  padding: 0 50px 20px;
+  border: 1px solid;
 }
 
 .form-wrapper {

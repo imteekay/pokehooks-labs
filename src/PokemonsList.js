@@ -11,7 +11,7 @@ const PokemonsList = () => {
       const response = await fetch(url);
       const data = await response.json();
       addPokemons(data.results);
-    };    
+    };
 
     fetchPokemons();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,13 +21,17 @@ const PokemonsList = () => {
     <div className="pokemons-list">
       <h2>Pokemons List</h2>
 
-      {state.pokemons.map((pokemon) =>
-        <div key={pokemon.name}>
-          <div>
-            <span>{pokemon.name}</span>
-            <button onClick={capture(pokemon)}>+</button>
-          </div>
-        </div>)}
+      <table>
+        <tr>
+          <th>Pokemon</th>
+          <th>Capture</th>
+        </tr>
+        {state.pokemons.map((pokemon) =>
+          <tr key={pokemon.name}>
+            <td><span>{pokemon.name}</span></td>
+            <td><button onClick={capture(pokemon)}>+</button></td>
+          </tr>)}
+      </table>
     </div>
   )
 }
