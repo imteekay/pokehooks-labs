@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { PokemonContext } from './PokemonContext';
-import { generateID } from './utils';
+import { generateID } from './generateID';
 
 const PokemonForm = () => {
   const [pokemonName, setPokemonName] = useState();

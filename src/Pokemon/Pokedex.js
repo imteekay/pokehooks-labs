@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { PokemonContext } from './PokemonContext';
+import { listPokemons } from './listPokemons';
 
 const Pokedex = () => {
   const { state, release } = useContext(PokemonContext);
@@ -13,11 +14,11 @@ const Pokedex = () => {
           <th>Pokemon</th>
           <th>Release</th>
         </tr>
-        {state.capturedPokemons.map((pokemon) =>
-          <tr key={pokemon.name}>
-            <td><span>{pokemon.name}</span></td>
-            <td><button onClick={release(pokemon)}>-</button></td>
-          </tr>)}
+        {listPokemons({
+          pokemons: state.capturedPokemons,
+          onClick: release,
+          buttonLabel: '-'
+        })}
       </table>
     </div>
   )

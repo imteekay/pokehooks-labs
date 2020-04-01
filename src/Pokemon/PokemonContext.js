@@ -5,12 +5,12 @@ import { CAPTURE, RELEASE, ADD_POKEMON, ADD_POKEMONS } from './actions';
 const PokemonContext = createContext();
 
 const PokemonProvider = (props) => {
-  const defaultState = {
+  const initialState = {
     pokemons: [],
     capturedPokemons: []
   };
 
-  const [state, dispatch] = useReducer(pokemonReducer, defaultState);
+  const [state, dispatch] = useReducer(pokemonReducer, initialState);
 
   const capture = (pokemon) => () => {
     dispatch({ type: CAPTURE, pokemon });
@@ -41,6 +41,6 @@ const PokemonProvider = (props) => {
       {props.children}
     </PokemonContext.Provider>
   )
-}
+};
 
 export { PokemonContext, PokemonProvider };
