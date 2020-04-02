@@ -3,7 +3,7 @@ import { PokemonContext } from './PokemonContext';
 import { listPokemons } from './listPokemons';
 
 const Pokedex = () => {
-  const { state, release } = useContext(PokemonContext);
+  const { capturedPokemons, release } = useContext(PokemonContext);
 
   return (
     <div className="pokedex">
@@ -15,7 +15,7 @@ const Pokedex = () => {
           <th>Release</th>
         </tr>
         {listPokemons({
-          pokemons: state.capturedPokemons,
+          pokemons: capturedPokemons,
           onClick: release,
           buttonLabel: '-'
         })}

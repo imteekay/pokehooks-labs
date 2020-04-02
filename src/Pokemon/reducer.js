@@ -1,3 +1,4 @@
+import { useReducer } from 'react';
 import { CAPTURE, RELEASE, ADD_POKEMON, ADD_POKEMONS } from './actions';
 
 const getCapturedPokemons = (capturedPokemons, releasedPokemon) =>
@@ -39,6 +40,10 @@ const pokemonReducer = (state, action) => {
     default:
       return state;
   }
-}
+};
 
-export { pokemonReducer, CAPTURE, RELEASE };
+export const usePokemonReducer = () =>
+  useReducer(pokemonReducer, {
+    pokemons: [],
+    capturedPokemons: []
+  });

@@ -5,7 +5,7 @@ import { listPokemons } from './listPokemons';
 const url = "https://pokeapi.co/api/v2/pokemon";
 
 const PokemonsList = () => {
-  const { state, capture, addPokemons } = useContext(PokemonContext);
+  const { pokemons, capture, addPokemons } = useContext(PokemonContext);
 
   useEffect(() => {
     const fetchPokemons = async () => {
@@ -27,7 +27,7 @@ const PokemonsList = () => {
           <th>Capture</th>
         </tr>
         {listPokemons({
-          pokemons: state.pokemons,
+          pokemons,
           onClick: capture,
           buttonLabel: '+'
         })}
