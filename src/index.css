@@ -7,20 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .main {
   display: flex;
 }
 
+.pokemons-list {
+  border-right: 1px solid;
+}
+
 .pokemons-list,
 .pokedex {
-  width: 50%;
   padding: 0 50px 20px;
-  border: 1px solid;
+  border-bottom: 1px solid;
+  flex-grow: 1;
 }
 
 .form-wrapper {

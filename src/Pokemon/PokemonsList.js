@@ -15,7 +15,7 @@ const PokemonsList = () => {
     };
 
     fetchPokemons();
-  }, []);
+  }, [addPokemons]);
 
   return (
     <div className="pokemons-list">

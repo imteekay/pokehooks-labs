@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 import { PokemonProvider } from './Pokemon/PokemonContext';
 import PokemonsList from './Pokemon/PokemonsList';
