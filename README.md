@@ -1,6 +1,7 @@
 # Pokehooks Labs
 
-A laboratory to use pokemons and do some experiments with React Hooks API
+A laboratory to use pokemons and do some experiments with React Hooks API. This is the source code for the [React Hooks, Context API, and Pokemons
+](https://leandrotk.github.io/tk/2020/04/react-hooks-context-api-and-pokemons/index.html) article.
 
 - [Building two lists, pokemons and pokedex, with `useState`](https://github.com/leandrotk/pokehooks/pull/1/files)
 - [Sharing data with `Context API`](https://github.com/leandrotk/pokehooks/pull/2/files)
