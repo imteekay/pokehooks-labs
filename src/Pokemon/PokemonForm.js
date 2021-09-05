@@ -8,19 +8,23 @@ const PokemonForm = () => {
 
   const handleNameOnChange = (e) => {
     setPokemonName(e.target.value);
-  }
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     addPokemon({
       id: generateID(),
-      name: pokemonName
+      name: pokemonName,
     });
   };
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <input type="text" placeholder="pokemon name" onChange={handleNameOnChange} />
+      <input
+        type="text"
+        placeholder="pokemon name"
+        onChange={handleNameOnChange}
+      />
       <input type="submit" value="Add" />
     </form>
   );

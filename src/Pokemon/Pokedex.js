@@ -17,11 +17,11 @@ const Pokedex = () => {
         {listPokemons({
           pokemons: capturedPokemons,
           onClick: release,
-          buttonLabel: '-'
+          buttonLabel: '-',
         })}
       </table>
     </div>
-  )
-}
+  );
+};
 
 export default Pokedex;

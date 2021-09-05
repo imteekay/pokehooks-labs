@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect } from 'react';
 import { PokemonContext } from './PokemonContext';
 import { listPokemons } from './listPokemons';
 
-const url = "https://pokeapi.co/api/v2/pokemon";
+const url = 'https://pokeapi.co/api/v2/pokemon';
 
 const PokemonsList = () => {
   const { pokemons, capture, addPokemons } = useContext(PokemonContext);
@@ -15,7 +16,7 @@ const PokemonsList = () => {
     };
 
     fetchPokemons();
-  }, [addPokemons]);
+  }, []);
 
   return (
     <div className="pokemons-list">
@@ -29,11 +30,11 @@ const PokemonsList = () => {
         {listPokemons({
           pokemons,
           onClick: capture,
-          buttonLabel: '+'
+          buttonLabel: '+',
         })}
       </table>
     </div>
-  )
-}
+  );
+};
 
 export default PokemonsList;

@@ -11,7 +11,7 @@ const App = () => (
       <PokemonsList />
       <Pokedex />
     </div>
-    <div className='form-wrapper'>
+    <div className="form-wrapper">
       <PokemonForm />
     </div>
   </PokemonProvider>

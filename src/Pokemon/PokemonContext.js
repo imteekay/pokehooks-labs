@@ -19,14 +19,14 @@ const PokemonProvider = (props) => {
     capture,
     release,
     addPokemon,
-    addPokemons
+    addPokemons,
   };
 
   return (
     <PokemonContext.Provider value={providerValue}>
       {props.children}
     </PokemonContext.Provider>
-  )
+  );
 };
 
 export { PokemonContext, PokemonProvider };
